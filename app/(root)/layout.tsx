@@ -1,5 +1,7 @@
 import React from 'react'
-
+import {
+    ClerkProvider
+  } from '@clerk/nextjs'
 
 interface SetupLayoutProp{
     children:React.ReactNode;
@@ -7,9 +9,14 @@ interface SetupLayoutProp{
 
 const SetupLayout = ({children}:SetupLayoutProp) => {
   return (
-    <div>
-      {children}
-    </div>
+    <ClerkProvider>
+      <html lang="en">
+        <body>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
+    
   )
 }
 
