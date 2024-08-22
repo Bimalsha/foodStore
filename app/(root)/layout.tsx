@@ -1,23 +1,16 @@
-import React from 'react'
-import {
-    ClerkProvider
-  } from '@clerk/nextjs'
+import React from "react";
 
-interface SetupLayoutProp{
-    children:React.ReactNode;
+
+interface SetupLayoutProp {
+  children: React.ReactNode;
 }
 
-const SetupLayout = ({children}:SetupLayoutProp) => {
+const SetupLayout = ({ children }: SetupLayoutProp) => {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body>
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
-    
-  )
-}
+    <html lang="en">
+      <body>{children}</body>
+    </html>
+  );
+};
 
-export default SetupLayout
+export default SetupLayout;
